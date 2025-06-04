@@ -1,0 +1,9 @@
+# Ignorar archivos de sistema y datos
+outputs/
+*.db
+*.log
+__pycache__/
+.venv/
+
+# Excepción: NO ignorar el .gitignore dentro de .venv
+!.venv/.gitignore
