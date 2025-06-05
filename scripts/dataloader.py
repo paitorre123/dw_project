@@ -33,7 +33,7 @@ class DataLoader:
         conn.commit()
         conn.close()
 
-    # dataloader.py
+
     def load_account_products(self, account_products_data):
         if not account_products_data:
             return

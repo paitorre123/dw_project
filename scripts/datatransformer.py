@@ -33,13 +33,6 @@ class DataTransformer:
                 if len(iso_date) >= 10:
                     birthdate = iso_date[:10]
 
-            # Extraer el tier activo principal (sin cambios)
-            active_tier = next(
-                (tier['tier'] for tier in customer.get('tier_and_details', {}).values()
-                 if tier.get('active', False)),
-                None
-            )
-
             # Generar customer_id a partir del username
             username = customer.get('username')
             customer_id = DataTransformer.generate_customer_id(customer)
